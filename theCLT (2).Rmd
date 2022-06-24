@@ -92,7 +92,7 @@ print (mean(x.avg))
 print (sd(x.avg))
 ```
 
-this chart looks to be an actual Unimodal vairable.  
+this chart looks to be an actual Unimodal.  
 the standard deviation is 10.51 and the mean is 50.56  
 
 finally for 36 random samples.
@@ -109,7 +109,7 @@ print (mean(x.avg))
 print (sd(x.avg))
 ```
 
-this chart looks to be a unimodal plot.
+this chart looks to be a unimodal.  
 the Standard deviation is 6.96 and the mean is 50.69
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
