@@ -21,6 +21,8 @@ densityplot(my1000,main="original data")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
+This plot shows that it actually is bimodal and has a double peaking moment a little after the 0 value of my1000 and just before the 100 value in my1000.  
+
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
 ```{r}
@@ -28,25 +30,92 @@ numb = 2
 Kdata   <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+
 densityplot(x.avg,main="sample size 2")
+print (mean(x.avg))
+print (sd(x.avg))
 ```
+
+for these data mean = `r mean(x.avg)` , std = `r sd(x.std)`
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
+ this sample data shows that it isn't unimodal but multimodal showing that each peak is a different hight reaching differnt highs. 
  
+ with the Standard Deviation being 29.95 and mean 50.16
 
 Do this again for 4 random samples
 
+```{r}
+numb = 4
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+
+densityplot(x.avg,main="sample size 4")
+print (mean(x.avg))
+print (sd(x.avg))
+```
+
+the chart is a multimodal graph that has 3 to 5 peaks.  
+the SD was 20.79 and the mean value was 50.4  
+
 Then again for 9 random samples
+
+```{r}
+numb = 9
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+densityplot(x.avg,main="sample size 9")
+print (mean(x.avg))
+print (sd(x.avg))
+```
+
+Multimodal chart with about 3 peaks looking more like a mountain with a gradual gain followed by a gradual decrease.  
+The SD of the sample size nine is 13.85 and the mean is 50.93
 
 then 16 random samples
 
+```{r}
+numb = 16
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+
+densityplot(x.avg,main="sample size 16")
+print (mean(x.avg))
+print (sd(x.avg))
+```
+
+this chart looks to be an actual Unimodal vairable.  
+the standard deviation is 10.51 and the mean is 50.56  
+
 finally for 36 random samples.
+
+```{r}
+numb = 36
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+x.std <- apply(mdata,1,sd)
+
+densityplot(x.avg,main="sample size 36")
+print (mean(x.avg))
+print (sd(x.avg))
+```
+
+this chart looks to be a unimodal plot.
+the Standard deviation is 6.96 and the mean is 50.69
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
 
- 
+in conclusion each plot had shown that the larger the sample size the less peaks the chart will have. it goes from a multimodal type of variable to a unimodal one. And since the Standard deviation had a constant regression and the mean stayed the same which was around 50 then the CLT is true.  
 
 Then submit the link to your github project  to canvas to complete this assignment.
