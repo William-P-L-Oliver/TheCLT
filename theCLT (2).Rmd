@@ -21,7 +21,7 @@ densityplot(my1000,main="original data")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-This plot shows that it actually is bimodal and has a double peaking moment a little after the 0 value of my1000 and just before the 100 value in my1000.  
+This plot shows that it actually is bimodal and has a double peak.  
 
 Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
 
